@@ -1,0 +1,9 @@
+### Аутентификация данных карты
+POST http://localhost:8080/card/validate
+Content-Type: application/json
+
+{
+  "cardNumber": "1234567890123456",
+  "expiryDate": "01/26",
+  "cvv": "123"
+}
