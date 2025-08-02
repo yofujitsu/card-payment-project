@@ -1,13 +1,13 @@
-package ru.it_one.yofujitsu.card_payment;
+package ru.it_one.yofujitsu.card_validation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CardPaymentApplication {
+public class CardValidationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CardPaymentApplication.class, args);
+        SpringApplication.run(CardValidationApplication.class, args);
     }
 
 }
