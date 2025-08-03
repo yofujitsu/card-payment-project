@@ -1,0 +1,70 @@
+openapi: 3.0.1
+info:
+  title: Payment Request API
+  version: 1.0.0
+paths:
+  /payment/authorize:
+    post:
+      summary: Request payment authorization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+      responses:
+        '200':
+          description: Authorization response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationResult'
+components:
+  schemas:
+    PaymentRequest:
+      type: object
+      properties:
+        cardNumber:
+          type: string
+          minLength: 16
+          maxLength: 16
+          pattern: '^\d{16}$'
+        expiryDate:
+          type: string
+          minLength: 1
+          pattern: '^(0[1-9]|1[0-2])\/\d{2}$'
+        cvv:
+          type: string
+          minLength: 3
+          maxLength: 3
+          pattern: '^\d{3}$'
+        amount:
+          type: number
+          minimum: 0.01
+        currency:
+          type: string
+          minLength: 3
+          maxLength: 3
+        merchantId:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          pattern: '^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$'
+      required:
+        - cardNumber
+        - expiryDate
+        - cvv
+        - amount
+        - currency
+        - merchantId
+        - email
+    AuthorizationResult:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        status:
+          type: string
+        message:
+          type: string

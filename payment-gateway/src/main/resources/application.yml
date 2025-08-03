@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: payment-gateway
+  rabbitmq:
+    host: host.docker.internal
+    username: guest
+    password: guest
+    port: 5672
+
+server:
+  port: 8081
+
+payment-authorization-request:
+  queue:
+    name: payment-authorization-request-queue
+
+card-validation:
+  queue:
+    name: card-validation-queue
+
+logging:
+  queue:
+    name: logging-queue
