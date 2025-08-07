@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: bank-payment
+  rabbitmq:
+    host: host.docker.internal
+    username: guest
+    password: guest
+    port: 5672
+
+payment-authorization-request:
+  queue:
+    name: payment-authorization-request-queue
+
+payment-authorization-response:
+  queue:
+    name: payment-authorization-response-queue
+
+logging:
+  queue:
+    name: logging-queue
+
+max:
+  payment:
+    amount: 10000
