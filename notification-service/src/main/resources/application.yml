@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: notification-service
+  rabbitmq:
+    host: host.docker.internal
+    port: 5672
+    username: guest
+    password: guest
+  mail:
+    host: host.docker.internal
+    port: 1025
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+
+server:
+  port:
+    8085
+
+logging:
+  queue:
+    name: logging-queue
+
+notification:
+  queue:
+    name: notification-queue
