@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: Notification Service API
+  version: 1.0.0
+paths:
+  /notify:
+    post:
+      summary: Send payment status notification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotificationRequest'
+      responses:
+        '200':
+          description: Notification sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationResponse'
+components:
+  schemas:
+    NotificationRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        transactionId:
+          type: string
+        status:
+          type: string
+      required:
+        - email
+        - transactionId
+        - status
+    NotificationResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
