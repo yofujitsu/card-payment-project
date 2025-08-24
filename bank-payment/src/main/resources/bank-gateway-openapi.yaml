@@ -1,0 +1,57 @@
+openapi: 3.0.1
+info:
+  title: Bank Gateway API
+  version: 1.0.0
+paths:
+  /bank/authorize:
+    post:
+      summary: Simulate bank authorization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BankRequest'
+      responses:
+        '200':
+          description: Bank response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BankResponse'
+components:
+  schemas:
+    BankRequest:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        cardNumber:
+          type: string
+        expiryDate:
+          type: string
+        cvv:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        email:
+          type: string
+      required:
+        - transactionId
+        - cardNumber
+        - expiryDate
+        - cvv
+        - amount
+        - currency
+        - email
+    BankResponse:
+      type: object
+      properties:
+        bankTransactionId:
+          type: string
+        approved:
+          type: boolean
+        reason:
+          type: string
