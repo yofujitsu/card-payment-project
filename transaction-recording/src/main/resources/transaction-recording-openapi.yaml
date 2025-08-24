@@ -1,0 +1,60 @@
+openapi: 3.0.1
+info:
+  title: Transaction Recording API
+  version: 1.0.0
+paths:
+  /transactions:
+    post:
+      summary: Save completed transaction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRecord'
+      responses:
+        '201':
+          description: Transaction saved
+    get:
+      summary: Get transaction by ID
+      parameters:
+        - name: transactionId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Transaction found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionRecord'
+components:
+  schemas:
+    TransactionRecord:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        status:
+          $ref: '#/components/schemas/TransactionStatus'
+        createdAt:
+          type: string
+          format: date-time
+        bankResponse:
+          type: object
+          properties:
+            bankTransactionId:
+              type: string
+            reason:
+              type: string
+    TransactionStatus:
+      type: string
+      enum:
+        - SUCCESS
+        - FAILED
