@@ -1,0 +1,44 @@
+openapi: 3.0.1
+info:
+  title: Card Authentication API
+  version: 1.0.0
+paths:
+  /card/validate:
+    post:
+      summary: Validate card details
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CardData'
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationResult'
+components:
+  schemas:
+    CardData:
+      type: object
+      properties:
+        cardNumber:
+          type: string
+        expiryDate:
+          type: string
+          format: MM/yy
+        cvv:
+          type: string
+      required:
+        - cardNumber
+        - expiryDate
+        - cvv
+    ValidationResult:
+      type: object
+      properties:
+        valid:
+          type: boolean
+        message:
+          type: string
