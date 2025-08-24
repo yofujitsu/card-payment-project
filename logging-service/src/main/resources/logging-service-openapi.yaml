@@ -1,0 +1,53 @@
+openapi: 3.0.1
+info:
+  title: Logging Service API
+  version: 1.0.0
+paths:
+  /logs:
+    post:
+      summary: Receive and store logs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogEntry'
+      responses:
+        '200':
+          description: Log saved
+    get:
+      summary: View logs (optional filtering)
+      parameters:
+        - name: level
+          in: query
+          schema:
+            type: string
+            enum: [INFO, WARN, ERROR]
+      responses:
+        '200':
+          description: List of logs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LogEntry'
+components:
+  schemas:
+    LogEntry:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        level:
+          type: string
+        message:
+          type: string
+        service:
+          type: string
+      required:
+        - timestamp
+        - level
+        - message
+        - service
