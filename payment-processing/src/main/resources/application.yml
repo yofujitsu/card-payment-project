@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: payment-processing
+  rabbitmq:
+    host: host.docker.internal
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port:
+    8083
+
+payment-authorization-response:
+  queue:
+    name: payment-authorization-response-queue
+
+final-payment-status:
+  queue:
+    name: final-payment-status-queue
+
+logging:
+  queue:
+    name: logging-queue
+
+notification:
+  queue:
+    name: notification-queue

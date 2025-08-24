@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: Payment Processing API
+  version: 1.0.0
+paths:
+  /payment/process:
+    post:
+      summary: Process final result of transaction
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BankResponse'
+      responses:
+        '200':
+          description: Process result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinalTransactionStatus'
+components:
+  schemas:
+    BankResponse:
+      type: object
+      properties:
+        bankTransactionId:
+          type: string
+        approved:
+          type: boolean
+        reason:
+          type: string
+      required:
+        - bankTransactionId
+        - approved
+    FinalTransactionStatus:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        status:
+          $ref: '#/components/schemas/TransactionStatus'
+        message:
+          type: string
+      required:
+        - transactionId
+        - status
+    TransactionStatus:
+      type: string
+      enum:
+        - SUCCESS
+        - FAILED
