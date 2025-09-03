@@ -34,11 +34,11 @@
 ## Схемы БД:
 - Схема БД транзакций:
 
-![Схема транзакций](<img src="https://github.com/user-attachments/assets/3609cc24-b98f-4241-ae2c-d2fc09a46fd3" alt="Схема транзакций" width="50%">)
+![Схема транзакций](https://github.com/user-attachments/assets/3609cc24-b98f-4241-ae2c-d2fc09a46fd3)
 
 - Схема БД логов:
 
-![Схема логов](<img src="https://github.com/user-attachments/assets/5c505d81-afc1-4750-808b-3911e08fe778" alt="Схема транзакций" width="50%">)
+![Схема логов](https://github.com/user-attachments/assets/5c505d81-afc1-4750-808b-3911e08fe778)
 
 
 ## Тестирование
