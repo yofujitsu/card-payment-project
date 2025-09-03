@@ -19,9 +19,6 @@
 
 ## Архитектура системы
 
-### Схема компонентов системы
-![Схема компонентов](https://github.com/user-attachments/assets/4598fca5-40a0-498b-b19c-aebd73d35890)
-
 Основные микросервисы:
 1. **payment-gateway** — принимает HTTP POST запросы на оплату.
 2. **card-validation** — проверяет корректность введённых данных карты.
@@ -30,6 +27,9 @@
 5. **transaction-recording** — сохраняет данные транзакций в БД.
 6. **notification-service** — отправляет email-уведомления о статусе транзакции (имитация через MailHog).
 7. **logging-service** — собирает логи всех операций и сохраняет их в БД.
+
+### Схема компонентов системы
+![Схема компонентов](https://github.com/user-attachments/assets/4598fca5-40a0-498b-b19c-aebd73d35890)
 
 ## Сценарий работы системы:
 1. Клиент отправляет **HTTP POST** запрос на `payment-gateway` c банковскими данными по URI `/payment/authoriize`.
