@@ -49,7 +49,7 @@
 ## Схемы БД:
 - Схема БД транзакций:
 
-![Схема транзакций](https://github.com/user-attachments/assets/c50c2835-70cb-4305-a228-422744a7f0e3)
+![Схема транзакций](https://github.com/user-attachments/assets/3609cc24-b98f-4241-ae2c-d2fc09a46fd3)
 
 - Схема БД логов:
 
