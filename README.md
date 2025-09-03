@@ -6,7 +6,7 @@
 
 ## Используемый стек
 
-![Java](https://img.shields.io/badge/Java-17-orange?logo=java&logoColor=white)  
+![Java](https://img.shields.io/badge/Java-orange?logo=java&logoColor=white)  
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=spring&logoColor=white)  
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-Message%20Broker-FF6600?logo=rabbitmq&logoColor=white)  
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?logo=postgresql&logoColor=white)  
@@ -18,7 +18,7 @@
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-Codegen-6BA539?logo=openapiinitiative&logoColor=white)  
 ![Gradle](https://img.shields.io/badge/Gradle-Build%20Tool-02303A?logo=gradle&logoColor=white) 
 
-- **Java 17** — основной язык разработки;
+- **Java** — основной язык разработки;
 - **Spring Boot** — фреймворк для разработки микросервисов, реализует DI, REST API, интеграцию с внешними системами;
 - **RabbitMQ** — брокер сообщений, через который микросервисы обмениваются событиями и результатами обработки;
 - **PostgreSQL** — реляционная СУБД для хранения транзакций и логов;
