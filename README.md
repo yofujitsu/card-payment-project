@@ -6,29 +6,28 @@
 
 ## Используемый стек
 
-### Java + Spring
-- ![Java](https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg) **Java 17** — основной язык разработки.  
-- ![Spring Boot](https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg) **Spring Boot** — каркас для создания микросервисов, реализует DI, REST API, интеграцию с брокером сообщений и базой данных.  
+![Java](https://img.shields.io/badge/Java-17-orange?logo=java&logoColor=white)  
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=spring&logoColor=white)  
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-Message%20Broker-FF6600?logo=rabbitmq&logoColor=white)  
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?logo=postgresql&logoColor=white)  
+![MailHog](https://img.shields.io/badge/MailHog-SMTP%20Testing-red?logo=mail.ru&logoColor=white)  
+![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker&logoColor=white)  
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker&logoColor=white)  
+![JUnit5](https://img.shields.io/badge/JUnit5-Testing-25A162?logo=junit5&logoColor=white)  
+![Mockito](https://img.shields.io/badge/Mockito-Mocking-yellow?logo=java&logoColor=white)  
+![OpenAPI](https://img.shields.io/badge/OpenAPI-Codegen-6BA539?logo=openapiinitiative&logoColor=white)  
+![Gradle](https://img.shields.io/badge/Gradle-Build%20Tool-02303A?logo=gradle&logoColor=white) 
 
-### Брокер сообщений
-- ![RabbitMQ](https://www.rabbitmq.com/img/logo-rabbitmq.svg) **RabbitMQ** — брокер сообщений, через который микросервисы обмениваются событиями и результатами обработки.  
-
-### БД
-- ![PostgreSQL](https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg) **PostgreSQL** — реляционная СУБД для хранения транзакций и логов.  
-
-### ✉SMTP-сервер
-- ![MailHog](https://raw.githubusercontent.com/mailhog/MailHog/master/assets/MailHog.png) **MailHog** — тестовый SMTP-сервер для отладки и проверки отправки email-уведомлений.  
-
-### Контейнеризация
-- ![Docker](https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg) **Docker** — контейнеризация всех сервисов.  
+- **Java 17** — основной язык разработки.  
+- **Spring Boot** — каркас для создания микросервисов, реализует DI, REST API, интеграцию с брокером сообщений и базой данных.  
+- **RabbitMQ** — брокер сообщений, через который микросервисы обмениваются событиями и результатами обработки.  
+- **PostgreSQL** — реляционная СУБД для хранения транзакций и логов.  
+- **MailHog** — тестовый SMTP-сервер для отладки и проверки отправки email-уведомлений.  
+- **Docker** — контейнеризация всех сервисов.  
 - **Docker Compose** — управление многоконтейнерной системой, объединение сервисов в единую сеть.  
-
-### Тестирование
-- ![JUnit5](https://junit.org/junit5/assets/img/junit5-logo.png) **JUnit 5** — модульное тестирование микросервисов.  
-- ![Mockito](https://avatars.githubusercontent.com/u/1515293?s=200&v=4) **Mockito** — создание моков для имитации зависимостей и проверки взаимодействий в тестах.  
-
-### ⚙Генерация кода
-- ![OpenAPI](https://avatars.githubusercontent.com/u/16343502?s=200&v=4) **OpenAPI Generator (Gradle plugin)** — автоматическая генерация DTO и клиентского кода из спецификаций `.yaml`, предоставленных для каждого микросервиса.  
+- **JUnit 5** — модульное тестирование микросервисов.  
+- **Mockito** — создание моков для имитации зависимостей и проверки взаимодействий в тестах.  
+- **OpenAPI Generator (Gradle plugin)** — автоматическая генерация DTO и клиентского кода из спецификаций `.yaml`, предоставленных в заданиях к проекту.  
 
 ## Стек проекта
 - **Spring Boot** — ;
