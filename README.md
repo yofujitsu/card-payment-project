@@ -9,7 +9,7 @@
 ![Java](https://img.shields.io/badge/Java-orange?logo=java&logoColor=white)  ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=spring&logoColor=white)  ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-Message%20Broker-FF6600?logo=rabbitmq&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-316192?logo=postgresql&logoColor=white)  ![MailHog](https://img.shields.io/badge/MailHog-SMTP%20Testing-red?logo=mail.ru&logoColor=white)  ![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker&logoColor=white)  ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-2496ED?logo=docker&logoColor=white)  ![JUnit5](https://img.shields.io/badge/JUnit5-Testing-25A162?logo=junit5&logoColor=white)  ![Mockito](https://img.shields.io/badge/Mockito-Mocking-yellow?logo=java&logoColor=white)  ![OpenAPI](https://img.shields.io/badge/OpenAPI-Codegen-6BA539?logo=openapiinitiative&logoColor=white)  ![Gradle](https://img.shields.io/badge/Gradle-Build%20Tool-02303A?logo=gradle&logoColor=white)
 
 - **Java** — основной язык разработки;
-- **Spring Boot** — фреймворк для разработки микросервисов, реализует DI, REST API, интеграцию с внешними системами;
+- **Spring Boot** — фреймворк для разработки микросервисов, реализует интеграцию с внешними системами;
 - **RabbitMQ** — брокер сообщений, через который микросервисы обмениваются событиями и результатами обработки;
 - **PostgreSQL** — реляционная СУБД для хранения транзакций и логов;
 - **MailHog** — локальный SMTP-сервер отправки email-уведомлений;  
